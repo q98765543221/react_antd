@@ -11,12 +11,16 @@ interface TestProps{
 @inject('testStore')
 @observer
 export default class Test extends React.Component<TestProps>{
+
   render(){
     const {testStore} = this.props;
-    const {addA}  = testStore!;
+    const {addA, changeM, m}  = testStore!;
     return <div >
       <Button onClick={addA}>click me</Button>
       {testStore!.a}
+      <br />
+      <Button onClick={changeM}>click me</Button>
+      {m.get('b')?.a}
     </div>
   }
 }

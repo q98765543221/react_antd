@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+
 
 .appLogo {
   width: 120px;
@@ -8,6 +8,11 @@
   float: left;
 }
 
-.site-layout-background {
-  background: #fff;
+.appLayout{
+  .leftSider {
+    .ant-menu{
+      // background:rgba(233,233,235,1);
+    }
+  }
+
 }

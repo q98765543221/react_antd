@@ -7,10 +7,15 @@ import App from './App';
 import { Provider } from 'mobx-react';
 import { SingletonStore } from './stores';
 import * as serviceWorker from './serviceWorker';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 ReactDOM.render(
   <Provider {...new SingletonStore()}>
-    <App />
+    <Router>
+      <App />
+    </ Router>
   </Provider>
   ,
   document.getElementById('root')
