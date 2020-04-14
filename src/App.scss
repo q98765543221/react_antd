@@ -1,18 +1,52 @@
-
+#root{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.appLayout {
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+  
+}
 
 .appLogo {
   width: 120px;
   height: 31px;
-  background: rgba(255, 255, 255, 0.2);
   margin: 16px 28px 16px 0;
   float: left;
+  img{
+    vertical-align: top;
+  }
 }
 
 .appLayout{
+  .header{
+    display: flex;
+    > ul{
+      margin-left: 166px;
+      flex: 1;
+      min-width: 1px;
+    }
+    .userInfo{
+      color: white;
+      button{
+        margin-left: 20px;
+      }
+    }
+  }
   .leftSider {
     .ant-menu{
-      // background:rgba(233,233,235,1);
+      background:rgba(233,233,235,1);
+      > li.ant-menu-item-selected{
+        background:rgba(52,133,253,0.13);
+      }
     }
   }
 
+}
+
+.ant-tabs-content,
+.ant-tabs-tabpane:focus{
+  outline: none;
 }
